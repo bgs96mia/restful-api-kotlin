@@ -1,0 +1,82 @@
+GET http://127.0.0.1:8080/api/products
+Accept: application/json
+
+###
+GET http://127.0.0.1:8080/api/products?size=5
+X-Api-Key: SECRET
+Accept: application/json
+
+###
+GET http://127.0.0.1:8080/api/products?size=5&page=1
+X-Api-Key: SECRET
+Accept: application/json
+
+###
+POST http://127.0.0.1:8080/api/products
+X-Api-Key: SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id" : "A0013",
+  "name" : "Ipad Mini 2022",
+  "price" : 8000000,
+  "quantity" : 10
+}
+
+###
+POST http://127.0.0.1:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id" : "",
+  "name" : "",
+  "price" : 0,
+  "quantity" : -10
+}
+
+###
+GET http://127.0.0.1:8080/api/products/A0001
+Accept: application/json
+
+###
+GET http://127.0.0.1:8080/api/products/A0
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8080/api/products/A0001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "Mac Book Pro M2 Pro",
+  "price": 36000000,
+  "quantity" : 15
+}
+
+###
+PUT http://127.0.0.1:8080/api/products/A00
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "Mac Book Pro M2 Pro",
+  "price": 36000000,
+  "quantity" : 15
+}
+
+###
+PUT http://127.0.0.1:8080/api/products/A0001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "",
+  "price": 0,
+  "quantity" : -15
+}
+
+###
+DELETE http://127.0.0.1:8080/api/products/A0006
+Accept: application/json
